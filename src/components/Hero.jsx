@@ -34,7 +34,7 @@ const Hero = () => {
           >
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-6xl font-poppins font-bold text-white leading-tight">
-                Hi, I'm <span className="text-primary">Wasiq</span>
+                Hi, I'm <span className="text-primary">Wasiq Afnan</span>
               </h1>
               <p className="text-xl lg:text-2xl text-gray-300 font-inter">
                 Full Stack Developer
