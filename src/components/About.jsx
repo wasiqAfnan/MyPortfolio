@@ -1,0 +1,117 @@
+import React from 'react'
+import { useInView } from 'react-intersection-observer'
+
+const About = () => {
+  const [leftRef, leftInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  })
+
+  const [rightRef, rightInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  })
+
+  return (
+    <section id="about" className="py-20 bg-about-bg">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-poppins font-bold text-white mb-4">About Me</h2>
+          <div className="w-24 h-1 bg-primary mx-auto"></div>
+        </div>
+        
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left side - Avatar */}
+          <div 
+            ref={leftRef}
+            className={`flex justify-center lg:justify-start transition-all duration-1000 ${
+              leftInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
+            }`}
+          >
+            <div className="relative">
+              <div className="w-80 h-80 rounded-full bg-gradient-to-br from-primary to-secondary p-1">
+                <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-24 h-24 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-4 flex items-center justify-center">
+                      <span className="text-3xl font-bold text-white">W</span>
+                    </div>
+                    <p className="text-white font-poppins font-semibold">Wasiq</p>
+                    <p className="text-gray-400 text-sm">Full Stack Developer</p>
+                  </div>
+                </div>
+              </div>
+              {/* Floating elements around avatar */}
+              <div className="absolute -top-4 -right-4 w-8 h-8 bg-project-border-1 rounded-full animate-pulse"></div>
+              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-project-border-2 rounded-full animate-pulse delay-1000"></div>
+              <div className="absolute top-1/2 -right-8 w-4 h-4 bg-project-border-3 rounded-full animate-pulse delay-500"></div>
+            </div>
+          </div>
+
+          {/* Right side - Bio */}
+          <div 
+            ref={rightRef}
+            className={`space-y-6 transition-all duration-1000 ${
+              rightInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
+            }`}
+          >
+            <h3 className="text-2xl font-poppins font-semibold text-white">
+              Passionate Developer with a Creative Mind
+            </h3>
+            
+            <div className="space-y-4 text-gray-300 font-inter leading-relaxed">
+              <p>
+                I'm a dedicated full-stack developer with over 3 years of experience crafting digital solutions 
+                that combine functionality with beautiful design. My journey in tech started with curiosity and 
+                has evolved into a passion for creating meaningful user experiences.
+              </p>
+              
+              <p>
+                I specialize in modern web technologies including React, Node.js, and cloud platforms. 
+                My approach focuses on writing clean, maintainable code while staying up-to-date with 
+                the latest industry trends and best practices.
+              </p>
+              
+              <p>
+                When I'm not coding, you'll find me exploring new technologies, contributing to open-source 
+                projects, or sharing knowledge with the developer community. I believe in continuous learning 
+                and pushing the boundaries of what's possible in web development.
+              </p>
+            </div>
+
+            {/* Skills */}
+            <div className="pt-4">
+              <h4 className="text-lg font-poppins font-semibold text-white mb-3">Technical Skills</h4>
+              <div className="flex flex-wrap gap-2">
+                <span className="badge badge-primary badge-lg">Html</span>
+                <span className="badge badge-secondary badge-lg">Css</span>
+                <span className="badge badge-accent badge-lg">JavaScript</span>
+                <span className="badge badge-info badge-lg">React</span>
+                <span className="badge badge-success badge-lg">Node.js</span>
+                <span className="badge badge-warning badge-lg">MongoDB</span>
+                <span className="badge badge-error badge-lg">MySql</span>
+                <span className="badge badge-primary badge-lg">Java</span>
+                <span className="badge badge-secondary badge-lg">C</span>
+                <span className="badge badge-accent badge-lg">C++</span>
+                <span className="badge badge-info badge-lg">php</span>
+                <span className="badge badge-success badge-lg">Python</span>
+                <span className="badge badge-warning badge-lg">Bootstrap</span>
+                <span className="badge badge-primary badge-lg">Tailwind</span>
+                <span className="badge badge-error badge-lg">Material-ui</span>
+                <span className="badge badge-secondary badge-lg">Daisy-ui</span>
+                <span className="badge badge-accent badge-lg">Postman</span>
+                <span className="badge badge-info badge-lg">Git</span>
+                <span className="badge badge-success badge-lg">Github</span>
+                {/*
+                <span className="badge badge-warning">MongoDB</span>
+                <span className="badge badge-error">MySql</span>
+                */}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default About 
