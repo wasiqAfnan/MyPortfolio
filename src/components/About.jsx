@@ -60,21 +60,18 @@ const About = () => {
             
             <div className="space-y-4 text-gray-300 font-inter leading-relaxed">
               <p>
-                I'm a dedicated full-stack developer with over 3 years of experience crafting digital solutions 
-                that combine functionality with beautiful design. My journey in tech started with curiosity and 
-                has evolved into a passion for creating meaningful user experiences.
+                I'm a passionate full-stack developer, building efficient and visually appealing web applications. What began as a simple interest in how websites work has grown into a full-fledged commitment to crafting seamless digital experiences.
               </p>
               
               <p>
-                I specialize in modern web technologies including React, Node.js, and cloud platforms. 
+                I specialize in modern web technologies including React, Node.js, and MongoDB. 
                 My approach focuses on writing clean, maintainable code while staying up-to-date with 
-                the latest industry trends and best practices.
+                the latest industry trends and best practices to ensure every solution is both robust and user-friendly.
               </p>
               
               <p>
-                When I'm not coding, you'll find me exploring new technologies, contributing to open-source 
-                projects, or sharing knowledge with the developer community. I believe in continuous learning 
-                and pushing the boundaries of what's possible in web development.
+                When I'm not coding, you'll find me exploring new technologies, Planning for any new projects, or sharing knowledge with the developer community. I believe in continuous learning 
+                and pushing the boundaries of what's possible in web development. I'm a firm believer in lifelong learning and always strive to improve both technically and creatively.
               </p>
             </div>
 
