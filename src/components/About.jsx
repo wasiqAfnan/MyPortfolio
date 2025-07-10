@@ -46,6 +46,7 @@ const About = () => {
               <div className="absolute top-1/2 -right-8 w-4 h-4 bg-project-border-3 rounded-full animate-pulse delay-500"></div>
             </div>  */}
 
+            {/* My image on the left side  */}
             <div className="avatar p-1 bg-gradient-to-br from-slate-500 to-slate-300 rounded-xl">
               <div className="w-[400px] h-[550px] ring-4 ring-slate-300 ring-offset-base-100 ring-offset-2 overflow-hidden shadow-2xl rounded-xl">
                 <img
