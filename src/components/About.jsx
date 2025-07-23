@@ -86,34 +86,6 @@ const About = () => {
             </div>
 
             {/* Skills */}
-            <div className="pt-4">
-              <h4 className="text-lg font-poppins font-semibold text-white mb-3">Technical Skills</h4>
-              <div className="flex flex-wrap gap-2">
-                <span className="badge badge-primary badge-lg">Html</span>
-                <span className="badge badge-secondary badge-lg">Css</span>
-                <span className="badge badge-accent badge-lg">JavaScript</span>
-                <span className="badge badge-info badge-lg">React</span>
-                <span className="badge badge-success badge-lg">Node.js</span>
-                <span className="badge badge-warning badge-lg">MongoDB</span>
-                <span className="badge badge-error badge-lg">MySql</span>
-                <span className="badge badge-primary badge-lg">Java</span>
-                <span className="badge badge-secondary badge-lg">C</span>
-                <span className="badge badge-accent badge-lg">C++</span>
-                <span className="badge badge-info badge-lg">php</span>
-                <span className="badge badge-success badge-lg">Python</span>
-                <span className="badge badge-warning badge-lg">Bootstrap</span>
-                <span className="badge badge-primary badge-lg">Tailwind</span>
-                <span className="badge badge-error badge-lg">Material-ui</span>
-                <span className="badge badge-secondary badge-lg">Daisy-ui</span>
-                <span className="badge badge-accent badge-lg">Postman</span>
-                <span className="badge badge-info badge-lg">Git</span>
-                <span className="badge badge-success badge-lg">Github</span>
-                {/*
-                <span className="badge badge-warning">MongoDB</span>
-                <span className="badge badge-error">MySql</span>
-                */}
-              </div>
-            </div>
           </div>
         </div>
       </div>

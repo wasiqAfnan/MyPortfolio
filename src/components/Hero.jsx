@@ -7,6 +7,10 @@ const Hero = () => {
     triggerOnce: true,
     threshold: 0.1,
   })
+  const [rightRef, rightInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  })
 
   const scrollToProjects = () => {
     document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' })
@@ -71,7 +75,10 @@ const Hero = () => {
           </div> */}
 
 
-          <div className="flex justify-center relative hidden md:flex">
+          <div
+            ref={rightRef}
+            className={`flex justify-center relative hidden md:flex transition-all duration-1000 ${rightInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
+          >
             {/* Main Avatar Bubble */}
             <div className="w-80 h-80 rounded-full bg-gradient-to-br from-primary to-secondary p-1">
               <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center">
