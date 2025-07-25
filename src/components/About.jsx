@@ -1,23 +1,25 @@
-import React from 'react';
-import { useInView } from 'react-intersection-observer';
-import myImg from '../assets/MyImg.png';
+import React from "react";
+import { useInView } from "react-intersection-observer";
+import myImg from "../assets/MyImg.png";
 
 const About = () => {
   const [leftRef, leftInView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
-  })
+  });
 
   const [rightRef, rightInView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
-  })
+  });
 
   return (
     <section id="about" className="py-20 bg-about-bg">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-poppins font-bold text-white mb-4">About Me</h2>
+          <h2 className="text-4xl font-poppins font-bold text-white mb-4">
+            About Me
+          </h2>
           <div className="w-24 h-1 bg-primary mx-auto"></div>
         </div>
 
@@ -25,8 +27,11 @@ const About = () => {
           {/* Left side - Avatar */}
           <div
             ref={leftRef}
-            className={`flex justify-center lg:justify-start transition-all duration-1000 ${leftInView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
-              }`}
+            className={`flex justify-center lg:justify-start transition-all duration-1000 ${
+              leftInView
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 -translate-x-10"
+            }`}
           >
             {/* <div className="relative">
               <div className="w-80 h-80 rounded-full bg-gradient-to-br from-primary to-secondary p-1">
@@ -48,7 +53,7 @@ const About = () => {
 
             {/* My image on the left side  */}
             <div className="avatar p-1 bg-gradient-to-br from-slate-500 to-slate-300 rounded-xl max-w-xs w-full mx-auto">
-              <div className="w-full aspect-[3/4] max-w-xs ring-4 ring-slate-300 ring-offset-base-100 ring-offset-2 overflow-hidden shadow-2xl rounded-xl">
+              <div className="w-full max-w-xs h-[400px] sm:h-[200px] md:h-[450px] ring-4 ring-slate-300 ring-offset-base-100 ring-offset-2 overflow-hidden shadow-2xl rounded-xl">
                 <img
                   src={myImg}
                   alt="Wasiq Afnan Ansari"
@@ -61,8 +66,11 @@ const About = () => {
           {/* Right side - Bio */}
           <div
             ref={rightRef}
-            className={`space-y-6 transition-all duration-1000 ${rightInView ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
-              }`}
+            className={`space-y-6 transition-all duration-1000 ${
+              rightInView
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 translate-x-10"
+            }`}
           >
             <h3 className="text-2xl font-poppins font-semibold text-white">
               Passionate Developer with a Creative Mind
@@ -70,18 +78,27 @@ const About = () => {
 
             <div className="space-y-4 text-gray-300 font-inter leading-relaxed">
               <p>
-                I'm a passionate full-stack developer, building efficient and visually appealing web applications. What began as a simple interest in how websites work has grown into a full-fledged commitment to crafting seamless digital experiences.
+                I'm a passionate full-stack developer, building efficient and
+                visually appealing web applications. What began as a simple
+                interest in how websites work has grown into a full-fledged
+                commitment to crafting seamless digital experiences.
               </p>
 
               <p>
-                I specialize in modern web technologies including React, Node.js, and MongoDB.
-                My approach focuses on writing clean, maintainable code while staying up-to-date with
-                the latest industry trends and best practices to ensure every solution is both robust and user-friendly.
+                I specialize in modern web technologies including React,
+                Node.js, and MongoDB. My approach focuses on writing clean,
+                maintainable code while staying up-to-date with the latest
+                industry trends and best practices to ensure every solution is
+                both robust and user-friendly.
               </p>
 
               <p>
-                When I'm not coding, you'll find me exploring new technologies, Planning for any new projects, or sharing knowledge with the developer community. I believe in continuous learning
-                and pushing the boundaries of what's possible in web development. I'm a firm believer in lifelong learning and always strive to improve both technically and creatively.
+                When I'm not coding, you'll find me exploring new technologies,
+                Planning for any new projects, or sharing knowledge with the
+                developer community. I believe in continuous learning and
+                pushing the boundaries of what's possible in web development.
+                I'm a firm believer in lifelong learning and always strive to
+                improve both technically and creatively.
               </p>
             </div>
 
@@ -90,7 +107,7 @@ const About = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About 
+export default About;
