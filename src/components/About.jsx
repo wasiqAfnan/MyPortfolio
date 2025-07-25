@@ -21,7 +21,7 @@ const About = () => {
           <div className="w-24 h-1 bg-primary mx-auto"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-6 md:gap-10 items-center">
           {/* Left side - Avatar */}
           <div
             ref={leftRef}
@@ -47,12 +47,12 @@ const About = () => {
             </div>  */}
 
             {/* My image on the left side  */}
-            <div className="avatar p-1 bg-gradient-to-br from-slate-500 to-slate-300 rounded-xl">
-              <div className="w-[400px] h-[550px] ring-4 ring-slate-300 ring-offset-base-100 ring-offset-2 overflow-hidden shadow-2xl rounded-xl">
+            <div className="avatar p-1 bg-gradient-to-br from-slate-500 to-slate-300 rounded-xl max-w-xs w-full mx-auto">
+              <div className="w-full aspect-[3/4] max-w-xs ring-4 ring-slate-300 ring-offset-base-100 ring-offset-2 overflow-hidden shadow-2xl rounded-xl">
                 <img
                   src={myImg}
                   alt="Wasiq Afnan Ansari"
-                  className="w-full h-full object-top hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </div>

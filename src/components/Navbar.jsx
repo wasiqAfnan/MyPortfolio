@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar bg-base-100/80 backdrop-blur-md fixed top-0 z-50 border-b border-base-300">
-      <div className="navbar-start pl-4 ml-3">
+      <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden" onClick={() => setIsOpen(!isOpen)}>
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -40,8 +40,10 @@ const Navbar = () => {
           )}
         </div>
         <a 
-        onClick={() => scrollToSection("#home")}
-        className="btn btn-ghost text-xl font-poppins font-semibold">&lt;WasiqPortfolio/&gt;</a>
+          onClick={() => scrollToSection("#home")}
+          className="btn btn-ghost text-xl font-poppins font-semibold px-2 md:px-4"
+          style={{minWidth: 0}}
+        >&lt;WasiqPortfolio/&gt;</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
