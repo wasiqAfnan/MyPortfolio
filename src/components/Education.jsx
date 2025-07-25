@@ -11,16 +11,16 @@ const Education = () => {
     {
       id: 1,
       year: "2024 - present",
-      degree: "Master of Computer Applications",
-      institution: "University of Technology",
-      description: "Specialized in Software Engineering with focus on web development and database systems."
+      degree: "Master of Computer Applications (MCA)",
+      institution: "Techno Main Salt Lake, MAKAUT",
+      description: "Specialized in Software Engineering with focus on web development."
     },
     {
       id: 2,
-      year: "2018 - 2020",
-      degree: "Associate Degree in Information Technology",
-      institution: "Community College",
-      description: "Foundation in programming, networking, and system administration."
+      year: "2021 - 2024",
+      degree: "Bachelor of Computer Applications (BCA)",
+      institution: "IGNOU",
+      description: "Foundation in programming, networking and Operating System."
     }
   ]
 
