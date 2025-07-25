@@ -39,7 +39,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-20 bg-hero-bg">
+    <section id="contact" className="py-20 bg-about-bg">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-poppins font-bold text-white mb-4">Contact Me</h2>
@@ -55,7 +55,7 @@ const Contact = () => {
        
 
           {/* Contact Form */}
-          <div className="card bg-base-100 shadow-xl border border-base-300">
+          <div className="card bg-gray-900 shadow-xl border border-base-300">
             <div className="card-body">
               <h3 className="card-title text-white font-poppins font-semibold mb-6">
                 Send me a message

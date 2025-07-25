@@ -60,7 +60,7 @@ const Skills = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section id="skills" className="px-4 md:px-16 py-16 font-inter">
+    <section id="skills" className="bg-hero-bg px-4 md:px-16 py-16 font-inter">
       <div
         ref={ref}
         className={`max-w-5xl mx-auto transition-all duration-1000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
