@@ -19,7 +19,7 @@ const Hero = () => {
 
   const downloadResume = () => {
     const link = document.createElement("a");
-    link.href = "../assets/WasiqAfnanResume.pdf";
+    link.href = "/WasiqAfnanResume.pdf";
     link.download = "Wasiq-Afnan-Resume.pdf";
     document.body.appendChild(link);
     link.click();
