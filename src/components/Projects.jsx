@@ -32,7 +32,7 @@ const Projects = () => {
       id: 3,
       title: "FULL-STACK EDUCATIONAL PLATFORM",
       description: "Developed a full-stack web platform for managing educational content, student data, and course modules using MERN-style architecture with MySQL. Designed RESTful APIs for user registration, course listing, and content management with authentication.",
-      tech: ["React.js", "Bootstrap", "Mui", "Node.js", "Express.js" ],
+      tech: ["React", "Bootstrap", "Mui", "Node.js", "Express.js" ],
       github: "https://github.com/wasiqAfnan/achieverSolutionFullSite.git",
       live: "",
       borderColor: "border-project-border-3",
