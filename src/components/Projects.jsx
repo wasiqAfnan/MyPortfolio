@@ -10,31 +10,31 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with React frontend, Node.js backend, and MongoDB database. Features include user authentication, product management, and payment integration.",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      github: "https://github.com/wasiq/ecommerce-platform",
-      live: "https://ecommerce-demo.com",
+      title: "CLASHOPIA – Clash Royale Card Explorer",
+      description: "Built a responsive, hybrid web app to display Clash Royale cards with modal-based detailed views. Implemented backend using Express.js to fetch, paginate, and serve card data from Clash Royale API securely",
+      tech: ["React", "React Bootstrap", "Node.js", "Express.js", "Clash Royale API"],
+      github: "https://github.com/wasiqAfnan/Clashopia",
+      live: " https://clashopia.vercel.app/",
       borderColor: "border-project-border-1",
       glowColor: "hover:shadow-project-border-1/50"
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      tech: ["React", "TypeScript", "Socket.io", "Express"],
-      github: "https://github.com/wasiq/task-manager",
-      live: "https://task-manager-demo.com",
+      title: "Accessify [Mini-Project]",
+      description: "A role-based authentication system built with Node.js, React, JWT, and bcrypt that securely manages user login and registration. It restricts access based on user roles (Admin, User), ensuring protected routes and actions. The frontend uses Tailwind CSS for a responsive, modern UI.",
+      tech: ["React", "Tailwind", "Node.js", "Express.js", "JWT", "Bcrypt.js"],
+      github: "https://github.com/wasiqAfnan/AutheticationSystemMongoDB",
+      live: "https://accessifywasiq.netlify.app/",
       borderColor: "border-project-border-2",
       glowColor: "hover:shadow-project-border-2/50"
     },
     {
       id: 3,
-      title: "Weather Dashboard",
-      description: "A responsive weather application that displays current weather and forecasts using OpenWeatherMap API with beautiful animations and charts.",
-      tech: ["React", "JavaScript", "Chart.js", "CSS3"],
-      github: "https://github.com/wasiq/weather-dashboard",
-      live: "https://weather-demo.com",
+      title: "FULL-STACK EDUCATIONAL PLATFORM",
+      description: "Developed a full-stack web platform for managing educational content, student data, and course modules using MERN-style architecture with MySQL. Designed RESTful APIs for user registration, course listing, and content management with authentication.",
+      tech: ["React.js", "Bootstrap", "Mui", "Node.js", "Express.js" ],
+      github: "https://github.com/wasiqAfnan/achieverSolutionFullSite.git",
+      live: "",
       borderColor: "border-project-border-3",
       glowColor: "hover:shadow-project-border-3/50"
     }
@@ -94,14 +94,14 @@ const Projects = () => {
                   >
                     GitHub
                   </a>
-                  <a
+                  {project.live && <a
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-sm btn-primary"
                   >
-                    Live Demo
-                  </a>
+                    Live Demo 
+                  </a>}
                 </div>
               </div>
             </div>
