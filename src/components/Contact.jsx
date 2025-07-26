@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import { useForm } from "react-hook-form";
+import toast, { Toaster } from "react-hot-toast";
 
 const Contact = () => {
   const [ref, inView] = useInView({
@@ -15,31 +17,56 @@ const Contact = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
+  const {
+    register,
+    handleSubmit,
+    watch,
+    reset,
+    formState: { errors },
+  } = useForm();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const watchedValues = watch(); // watches all fields
+
+  // Sync watched values with formData
+  useEffect(() => {
+    setFormData({
+      name: watchedValues.name || "",
+      email: watchedValues.email || "",
+      message: watchedValues.message || "",
+    });
+  }, [watchedValues.name, watchedValues.email, watchedValues.message]);
+
+  const onSubmit = async (formData) => {
+    // e.preventDefault();
     setIsSubmitting(true);
 
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 2000));
 
     // Reset form
-    setFormData({ name: "", email: "", message: "" });
+    reset();
     setIsSubmitting(false);
 
-    // Show success message (you can implement a toast notification here)
-    alert("Message sent successfully!");
+    // Show success message
+    toast.success("Message sent successfully!");
+
+    console.log(formData);
   };
 
   return (
     <section id="contact" className="py-20 bg-about-bg">
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+        toastOptions={{
+          duration: 5000,
+          removeDelay: 1000,
+          style: {
+            background: "#363636",
+            color: "#fff",
+          },
+        }}
+      />
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-poppins font-bold text-white mb-4">
@@ -61,7 +88,7 @@ const Contact = () => {
                 Send me a message
               </h3>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div className="form-control">
                   <label className="label">
                     <span className="label-text text-white font-inter">
@@ -70,13 +97,11 @@ const Contact = () => {
                   </label>
                   <input
                     type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    placeholder="Your name"
+                    placeholder="Your Name"
+                    {...register("name", { required: "Name is required" })}
                     className="input input-bordered bg-base-200 text-white placeholder-gray-400 focus:input-primary transition-all duration-300"
-                    required
                   />
+                  {errors.name && <p>{errors.name.message}</p>}
                 </div>
 
                 <div className="form-control">
@@ -87,13 +112,18 @@ const Contact = () => {
                   </label>
                   <input
                     type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    placeholder="your.email@example.com"
+                    placeholder="Your Email"
+                    {...register("email", {
+                      required: "Email is required",
+                      pattern: {
+                        value:
+                          /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                        message: "Invalid email address",
+                      },
+                    })}
                     className="input input-bordered bg-base-200 text-white placeholder-gray-400 focus:input-primary transition-all duration-300"
-                    required
                   />
+                  {errors.email && <p>{errors.email.message}</p>}
                 </div>
 
                 <div className="form-control">
@@ -103,26 +133,22 @@ const Contact = () => {
                     </span>
                   </label>
                   <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    placeholder="Your message..."
+                    {...register("message")}
+                    placeholder="Your Message"
                     className="textarea textarea-bordered bg-base-200 text-white placeholder-gray-400 focus:textarea-primary transition-all duration-300 h-32"
-                    required
                   ></textarea>
                 </div>
 
                 <div className="form-control mt-8">
                   <button
                     type="submit"
-                    disabled={isSubmitting}
                     className={`btn btn-primary btn-lg text-white font-poppins font-semibold transform transition-all duration-300 ${
                       isSubmitting
                         ? "loading"
                         : "hover:scale-105 hover:shadow-lg hover:shadow-primary/50"
                     }`}
                   >
-                    {isSubmitting ? "Sending..." : "Send Message"}
+                    Send Message
                   </button>
                 </div>
               </form>
