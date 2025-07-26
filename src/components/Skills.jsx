@@ -15,7 +15,7 @@ const skillsData = [
       { label: 'React JS', icon: <FaReact className="text-cyan-400" /> },
       { label: 'Tailwind CSS', icon: <SiTailwindcss className="text-sky-400" /> },
       { label: 'Bootstrap', icon: <FaBootstrap className="text-purple-500" /> },
-      {label: 'Tailwind', icon: <SiMui />}
+      {label: 'Material UI', icon: <SiMui />}
       
     ],
   },
@@ -60,15 +60,19 @@ const Skills = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section id="skills" className="bg-hero-bg px-4 md:px-16 py-16 font-inter">
+    <section id="skills" className="bg-hero-bg px-4 md:px-16 py-16 font-inter scroll-mt-5">
       <div
         ref={ref}
         className={`max-w-5xl mx-auto transition-all duration-1000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-2 font-poppins tracking-widest text-white">SKILLS</h2>
+        <div className="text-center mb-5">
+          <h2 className="text-4xl font-poppins font-bold text-white mb-4">Skills</h2>
+          <div className="w-24 h-1 bg-primary mx-auto"></div>
+        </div>
         <p className="text-center text-gray-400 mb-10 max-w-2xl mx-auto">
           A collection of my technical skills and expertise honed through various projects and experience
         </p>
+        
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
           {skillsData.map((card) => (
             <div
