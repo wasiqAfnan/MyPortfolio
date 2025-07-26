@@ -42,7 +42,9 @@ const Projects = () => {
 
   const getTechTagColor = (tech) => {
     if (tech === 'React') return 'bg-react-tag text-white'
-    if (tech === 'JavaScript') return 'bg-js-tag text-black'
+    if (tech === 'Node.js') return 'bg-js-tag text-black'
+    if (tech === 'Express.js') return 'bg-express-tag text-white'
+    if (tech === 'Tailwind') return 'bg-tailwind-tag text-black'
     return 'bg-gray-600 text-white'
   }
 

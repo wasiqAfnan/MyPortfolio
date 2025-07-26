@@ -17,9 +17,11 @@ export default {
         'secondary-btn': '#12c2a6',
         'project-border-1': '#9255f6',
         'project-border-2': '#00ffff',
-        'project-border-3': '#12c2a6',
+        'project-border-3': '#12c2a9',
         'react-tag': '#3345ff',
         'js-tag': '#f9cc3d',
+        'express-tag': '#34a853',
+        'tailwind-tag': "#ff7f11"
       },
     },
   },
