@@ -98,7 +98,14 @@ const Contact = () => {
                   <input
                     type="text"
                     placeholder="Your Name"
-                    {...register("name", { required: "Name is required" })}
+                    {...register("name", {
+                      required: "Name is required",
+                      pattern: {
+                        value: /^[A-Za-z\s]+$/,
+                        message:
+                          "Name cannot contain numbers or special characters",
+                      },
+                    })}
                     className="input input-bordered bg-base-200 text-white placeholder-gray-400 focus:input-primary transition-all duration-300"
                   />
                   {errors.name && <p>{errors.name.message}</p>}
