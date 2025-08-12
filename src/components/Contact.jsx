@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { useForm } from "react-hook-form";
 import toast, { Toaster } from "react-hot-toast";
+import axios from "axios";
 
 const Contact = () => {
   const [ref, inView] = useInView({
@@ -40,17 +41,41 @@ const Contact = () => {
     // e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    // form submission using emailjs api
+    // setting up data for emailjs
+    const data = {
+      service_id: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      template_id: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      user_id: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+      template_params: {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      },
+    };
 
-    // Reset form
-    reset();
-    setIsSubmitting(false);
+    // making api call to email js
+    try {
+      const res = await axios.post(
+        "https://api.emailjs.com/api/v1.0/email/send",
+        data
+      );
+      console.log(res);
+      // Reset form
+      reset();
+      setIsSubmitting(false);
 
-    // Show success message
-    toast.success("Message sent successfully!");
+      // Show success message
+      toast.success("Message sent successfully!");
 
-    console.log(formData);
+      console.log(data);
+    } catch (error) {
+      // Reset form
+      reset();
+      setIsSubmitting(false);
+      toast.error("Some error occured!");
+      console.log(error)
+    }
   };
 
   return (
