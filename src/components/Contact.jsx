@@ -67,14 +67,11 @@ const Contact = () => {
 
       // Show success message
       toast.success("Message sent successfully!");
-
-      console.log(data);
     } catch (error) {
       // Reset form
       reset();
       setIsSubmitting(false);
       toast.error("Some error occured!");
-      console.log(error)
     }
   };
 
@@ -165,10 +162,11 @@ const Contact = () => {
                     </span>
                   </label>
                   <textarea
-                    {...register("message")}
+                    {...register("message", { required: "Message is required",})}
                     placeholder="Your Message"
                     className="textarea textarea-bordered bg-base-200 text-white placeholder-gray-400 focus:textarea-primary transition-all duration-300 h-32"
                   ></textarea>
+                  {errors.message && <p>{errors.message.message}</p>}
                 </div>
 
                 <div className="form-control mt-8">
