@@ -72,6 +72,7 @@ const Contact = () => {
       reset();
       setIsSubmitting(false);
       toast.error("Some error occured!");
+      console.log(error);
     }
   };
 
