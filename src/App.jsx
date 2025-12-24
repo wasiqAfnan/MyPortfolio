@@ -7,6 +7,8 @@ import Projects from './components/Projects'
 import Education from './components/Education'
 import Contact from './components/Contact'
 
+import { Analytics } from "@vercel/analytics/react"
+
 function App() {
   return (
     <div className="min-h-screen">
@@ -17,6 +19,7 @@ function App() {
       <Projects />
       <Education />
       <Contact />
+      <Analytics />
     </div>
   )
 }
