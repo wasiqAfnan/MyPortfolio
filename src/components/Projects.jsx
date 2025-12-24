@@ -10,26 +10,38 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "CLASHOPIA – Clash Royale Card Explorer",
-      description: "Built a responsive, hybrid web app to display Clash Royale cards with modal-based detailed views. Implemented backend using Express.js to fetch, paginate, and serve card data from Clash Royale API securely",
-      tech: ["React", "React Bootstrap", "Node.js", "Express.js", "Clash Royale API"],
-      github: "https://github.com/wasiqAfnan/Clashopia",
-      live: " https://clashopia.vercel.app/",
+      title: "BiteBot – AI-Powered Recipe & Culinary Platform",
+      description: "A scalable Node.js/Express REST API powering an AI-driven recipe platform. Built with React and DaisyUI on the frontend and implements JWT authentication, cook subscriptions via Razorpay, and secure user access. Supports recipe management with nutrition analysis and AI-based intelligent search.",
+      tech: ["React", "DaisyUI", "Tailwind", "Node.js", "Express.js", "MongoDB", "JWT", "Cloudinary", "OpenAI API"],
+      github: "https://github.com/wasiqAfnan/BiteBotBackend/",
+      live: "https://www.bitebot.site/",
       borderColor: "border-project-border-1",
       glowColor: "hover:shadow-project-border-1/50"
     },
     {
       id: 2,
-      title: "Accessify [Mini-Project]",
-      description: "A role-based authentication system built with Node.js, React, JWT, and bcrypt that securely manages user login and registration. It restricts access based on user roles (Admin, User), ensuring protected routes and actions. The frontend uses Tailwind CSS for a responsive, modern UI.",
-      tech: ["React", "Tailwind", "Node.js", "Express.js", "JWT", "Bcrypt.js"],
-      github: "https://github.com/wasiqAfnan/AutheticationSystemMongoDB",
-      live: "https://accessifywasiq.netlify.app/",
+      title: "Clashopia – Clash Royale Card Explorer",
+      description: "Built a responsive, hybrid web app to display Clash Royale cards with modal-based detailed views. Implemented backend using Express.js to fetch, paginate, and serve card data from Clash Royale API securely",
+      tech: ["React", "React Bootstrap", "Node.js", "Express.js", "Clash Royale API"],
+      github: "https://github.com/wasiqAfnan/Clashopia",
+      // live: "https://clashopia.vercel.app/",
+      live: "https://clashopia.wasiqafnan.in/",
       borderColor: "border-project-border-2",
       glowColor: "hover:shadow-project-border-2/50"
     },
     {
       id: 3,
+      title: "Accessify [Mini-Project]",
+      description: "A role-based authentication system built with Node.js, React, JWT, and bcrypt that securely manages user login and registration. It restricts access based on user roles (Admin, User), ensuring protected routes and actions. The frontend uses Tailwind CSS for a responsive, modern UI.",
+      tech: ["React", "Tailwind", "Node.js", "Express.js", "JWT", "Bcrypt.js"],
+      github: "https://github.com/wasiqAfnan/AutheticationSystemMongoDB",
+      // live: "https://accessifywasiq.netlify.app/",
+      live: "https://accessify.wasiqafnan.in/",
+      borderColor: "border-project-border-3",
+      glowColor: "hover:shadow-project-border-3/50"
+    },
+    {
+      id: 4,
       title: "FULL-STACK EDUCATIONAL PLATFORM",
       description: "Developed a full-stack web platform for managing educational content, student data, and course modules using MERN-style architecture with MySQL. Designed RESTful APIs for user registration, course listing, and content management with authentication.",
       tech: ["React", "Bootstrap", "Mui", "Node.js", "Express.js" ],
